@@ -35,7 +35,7 @@ The model is trained with initial epochs of 10. Early stopping is also applied i
 ## 4. Result 
 The model is evaluated with test data, which is shown in figure below.
  
-![image](https://user-images.githubusercontent.com/100177902/163774707-4511529f-4fad-4422-8a09-f9b4eff2d20f.png)
+![image](https://user-images.githubusercontent.com/100177902/163775960-fab14c4c-e927-4b6f-a800-c2dbaef1972f.png)
 
 ## 5. Conclusion
 Transfer learning is widely use in deep learning model training approach as it is convenient and less resourceful consumption since the model is consructed based on the pre-trained model. With this method, we can save lot of time and energy as well as other resources. What we need is abundant of quality data so that the model performance is high. The model trained in this project managed to achieve both 99% accuracy and validation accuracy. Overall rhe model performance is very excellent.
