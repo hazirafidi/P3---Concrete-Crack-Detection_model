@@ -293,11 +293,8 @@ model.evaluate(test_data)
 
 # Now we can use the trained model to make prediction from test dataset
 image_batch, label_batch = test_data.as_numpy_iterator().next()
-predictions = model.predict_on_batch(image_batch).flatten()
-class_predictions = np.argmax(predictions, axis=0)
-
-print("Predictions: ", predictions)
-print("Labels: ", class_predictions)
+predictions = model.predict_on_batch(image_batch)
+class_predictions = np.argmax(predictions, axis=1)
 
 # Plot the prediction image
 plt.figure(figsize = (20,20))
@@ -305,7 +302,9 @@ plt.figure(figsize = (20,20))
 for i in range(10):
   axs = plt.subplot(5,5,i+1)
   plt.imshow(image_batch[i].astype("uint8"))
-  plt.title(class_names[label_batch[i]])
+  current_prediction = class_names[class_predictions[i]]
+  current_label = class_names[label_batch[i]]
+  plt.title(f"Prediction : {current_prediction} \n Actual : {current_label}")
   plt.axis("off")
 
 """## Save the model"""
