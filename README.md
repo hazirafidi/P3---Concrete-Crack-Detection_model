@@ -2,7 +2,7 @@
  Concrete crack detection model training via Transfer Learning
 
 ## 1. Project Summary
-This project is carried out to implement Deep Learning on Model Training for Image Classification via Transfer Learning. The objective of this project is to train a model that be able to detect concrete crack images. The dataset is retrieved from [here] (https://shrdc-my.sharepoint.com/personal/kong_kah_chun_shrdc_org_my/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkong%5Fkah%5Fchun%5Fshrdc%5Forg%5Fmy%2FDocuments%2FDeep%20Learning%20TTT%2FImage%20Segmentation%2FData%2Fdata%2Dscience%2Dbowl%2D2018%2Ezip&parent=%2Fpersonal%2Fkong%5Fkah%5Fchun%5Fshrdc%5Forg%5Fmy%2FDocuments%2FDeep%20Learning%20TTT%2FImage%20Segmentation%2FData&ga=1)
+This project is carried out to implement Deep Learning on Model Training for Image Classification via Transfer Learning. The objective of this project is to train a model that be able to detect concrete crack images.
 
 ## 2. IDE and Framework 
 The project is built with Google Colab Notebook as the main IDE. The main frameworks used in this project are TensorFlow, Numpy, Matplotlib, OpenCV and Scikit-learn.
@@ -28,15 +28,16 @@ The base model use in this project is VGG16. The feature extraction from base mo
 
 The model is trained with initial epochs of 10. Early stopping is also applied in the model training to avoid overfitting. At the first Feature Extraction training, there is no early stopping. Then Fine-tune model is implemented to increase performance even further or "fine-tunes" the weights of the top layer of the VGG19 model alongside the classifier added. The training continued from the initial epochs with addition of 10 new epochs. The training stops at epoch 18, with a training accuracy of 99% and validation accuracy of 99%. The model training graphs for both Feature Extraction and Fine-Tune stages are shown in figures below.
  
- ![image](https://user-images.githubusercontent.com/100177902/163774559-e2ffce3f-6636-4e4d-8528-902470ea14d0.png)
- ![image](https://user-images.githubusercontent.com/100177902/163774585-6bc27e48-c8ae-42ac-8804-f033dcd0bb42.png)
+ ![image](https://user-images.githubusercontent.com/100177902/167415491-2115276e-e0e2-42ed-bb01-39e571b220fe.png)
+
+ ![image](https://user-images.githubusercontent.com/100177902/167415538-2f4db687-80ed-4525-b6fc-e10bfb3d58e6.png)
 
 
 ## 4. Result 
 The model is evaluated with test image data, which is shown in figure below.
  
-![image](https://user-images.githubusercontent.com/100177902/163776174-460bb9ce-91db-4408-adf4-1056f6c8d672.png)
+![image](https://user-images.githubusercontent.com/100177902/167415631-0c8234ab-20ff-4fe8-9c2b-b4dbd9bbec27.png)
 
 
 ## 5. Conclusion
-Transfer learning is widely use in deep learning model training approach as it is convenient and less resourceful consumption since the model is consructed based on the pre-trained model. With this method, we can save lot of time and energy as well as other resources. What we need is abundant of quality data so that the model performance is high. The model trained in this project managed to achieve both 99% accuracy and validation accuracy. Overall rhe model performance is very excellent.
+Transfer learning is widely use in deep learning model training approach as it is convenient and less resourceful consumption since the model is consructed based on the pre-trained model. With this method, we can save lot of time and energy as well as other resources. What we need is abundant of quality data so that the model performance is high. The model trained in this project managed to achieve both 99% accuracy and validation accuracy. Overall the model performance is very excellent.
